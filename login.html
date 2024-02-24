@@ -36,6 +36,11 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script
+			  src="https://code.jquery.com/jquery-3.7.1.min.js"
+			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			  crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -66,33 +71,15 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#departments">Departments</a></li>
-          <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto active" href="/index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="/index.html?#about">Sobre nosotros</a></li>
+          <li><a class="nav-link scrollto" href="/index.html?#services">Servicios</a></li>
+          <li><a class="nav-link scrollto" href="#laregistrasion">Registrarse</a></li>
+          <li><a class="nav-link scrollto" href="/index.html?#doctors">Doctores</a></li>
+          <li><a class="nav-link scrollto" href="/index.html?#contact">Contacto</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+      </nav>
       <a href="index.html" class="appointment-btn scrollto"><span class="d-none d-md-inline">Volver</span></a>
 
     </div>
@@ -134,6 +121,51 @@
       </div>
     </section>
 
+    <section id="laregistrasion" class="appointment section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Regístrate</h2>
+          <p>A continuación, rellena el siguiente formulario para registrarte.</p>
+        </div>
+
+        <form id="registro">
+          <div class="row">
+            <div class="col-md-4 form-group">
+              <p>Nombre</p>
+              <label for="nombre"></label>
+              <input type="name" id="nombre" class="form-control" required>
+
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <p>Correo Electrónico</p>
+              <label for="usuario"></label>
+              <input type="email" id="usuario" class="form-control" required>
+
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <p>Teléfono</p>
+              <label for="telefono"></label>
+              <input type="phone" id="telefono" class="form-control" required>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 form-group mt-3">
+              <p>Contraseña</p>
+              <label for="contraseña"></label>
+              <input type="password" id="contraseña" class="form-control" required>
+
+            </div>
+          </div>
+
+          <div class="text-center"><button class="botonregistrar btn btn-primary" type="submit">Regístrate</button></div>
+        </form>
+
+      </div>
+    </section>
+
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -157,27 +189,16 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/index.html?#about">Sobre nosotros</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/index.html?#services">Servicios</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a >Condiciones de Servicios</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a >Politica de privacidad</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
+            <h4>Unéte y actualizate con las ultimas noticias de Medilab</h4>
             <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
