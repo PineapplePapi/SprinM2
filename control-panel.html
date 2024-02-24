@@ -10,6 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
+  <script src="jquery_371.js"></script>
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -282,11 +283,23 @@
                           
                           </div>
                         
-                          <div class="row mt-3">
+                          <div class="row">
                             <!-- Segunda Fila -->
                             <div class="col-md-12">
                               <div class="p-2" id="grafico">
-                                
+                                <canvas id="grafica"></canvas>
+                                <button class="btn d-none btn-success" id="btncolesterol">
+                                  Colesterol HDL
+                                </button>
+                                <button class="btn d-none btn-success" id="btncolesterol2">
+                                  Colesterol LDL
+                                </button>
+                                <button class="btn d-none btn-success" id="btncolesterol3">
+                                  Colesterol Total
+                                </button>
+                                <button class="btn d-none btn-success" id="btntrigliceridos">
+                                  Triglicéridos
+                                </button>
                               </div>
                             </div>
                           
