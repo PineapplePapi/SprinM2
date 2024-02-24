@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Tu Salud</title>
+</head>
+<body>
+    <header>
+        <div>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">Tu Salud</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/registro.html">Registro</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Proveedores de Salud</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://reportesdeis.minsal.cl/ListaEstablecimientoWebSite/">Hospitales</a></li>
+                            <li><a class="dropdown-item" href="https://www.clinicasdechile.cl/asociados/">Clinicas</a></li>
+                            <li><a class="dropdown-item" href="https://samu.cl/">Ambulancias</a></li>
+                            <li><a class="dropdown-item" href="https://www.fonasa.cl/">Fonasa</a></li>
+                            <li><a class="dropdown-item" href="http://www.isapre.cl/las-isapres">Isapres</a></li>
+                            <li><a class="dropdown-item" href="https://www.supersalud.gob.cl/servicios/669/w3-article-5587.html">Medicos Inscritos</a></li>
+                            <li><hr class="dropdown-divider"></hr></li>
+                            <li><a class="dropdown-item" href="/proveedores.html">Pagina Proveedores</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                    <form class="d-flex">
+                        <form class="d-flex">
+                            <button class="btn btn-primary me-md-2" type="button" id="openModalBtn">Acceso usuarios</button>
+                            <div id="modal" class="modal">
+                                <div class="modal-content">
+                                    <span id="closeModalBtn" class="close">&times;</span>
+                                    <div class="col max" style="width: 300px; margin: 0 auto; margin-top: 50px;">
+                                        <div class="card text-center">
+                                            <div class="mt-1 p-2 bg-primary text-white rounded">
+                                                <h1>Acceso Usuarios</h1>
+                                            </div>
+                                            <form id="loginForm">
+                                                <div class="mb-3">
+                                                <label for="username" class="form-label">Nombre de usuario:</label>
+                                                <input class="form-control" type="email" id="username" name="username" required placeholder="usuario1@gmail.com">
+                                                </div>
+                                                <div class="mb-3">
+                                                <label for="password" class="form-label">Contraseña:</label>
+                                                <input type="password" class="form-control" id="password" name="password" required placeholder="contrasena1">
+                                                </div>
+                                                <div class="row">
+                                                    <button type="button" class="btn btn-primary" id="loginButton">Ingresar</button>
+                                                </div>
+                                                <div class="row">
+                                                    <a href="./registro.html" class="btn btn-success">Crear cuenta nueva</a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </form>
+                </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-3">
+                <h2>Perfil</h2>
+                <h5></h5>
+                <div class="fakeimg">Charles Montgomery Burns</div>
+                <img src="/assets/img/burns.png" alt="">
+                <h4>Centro Medico Asociado</h4>
+                <p><a href="http://www.hospitalfricke.cl/">Hospital Gustavo Fricke</a></p>
+                <ul class="nav nav-pills flex-column">
+                    <button type="button" class="btn btn-secondary">
+                    <li class="nav-item">
+                    <a class="nav-link text-bg-secondary" href="/PerfilUsuario/perfil.html">Perfil</a>
+                    </li>
+                    </button>
+                    <button type="button" class="btn btn-secondary">
+                    <li class="nav-item">
+                    <a class="nav-link text-bg-secondary" href="/Examenes/examenes.html">Examenes</a>
+                    </li>
+                    </button>
+                    <button type="button" class="btn btn-secondary">
+                    <li class="nav-item">
+                    <a class="nav-link text-bg-secondary" href="/PerfilUsuario/calendario.html">Calendario</a>
+                    </li>
+                    </button>
+                    <button type="button" class="btn btn-secondary">
+                    <li class="nav-item">
+                    <a class="nav-link text-bg-secondary" href="/PerfilUsuario/contactos.html">Contactos</a>
+                    </li>
+                    </button>
+                    <button type="button" class="btn btn-secondary">
+                    <li class="nav-item">
+                    <a class="nav-link text-bg-secondary" href="/PerfilUsuario/enfermedades.html">Enfermedades</a>
+                    </li>
+                    </button>
+                </ul>
+                <hr class="d-sm-none">
+                </div>
+                <div class="col-sm-8">
+                <div class="container mt-3">
+                    <h2>Hemograma</h2>         
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Examen</th>
+                            <th>Muestra</th>
+                            <th>Valor normal</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Glóbulos Rojos (Eritrocitos)</td>
+                            <td>3.1 células/mm³</td>
+                            <td>4.5 - 5.5 millones por microlitro (µL) o células/mm³.</td>
+                        </tr>
+                        <tr>
+                            <td>Hemoglobina (Hb)</td>
+                            <td>9.2 (g/dL)</td>
+                            <td>13.5 - 17.5 gramos por decilitro (g/dL) o gramos por litro (g/L).</td>
+                        </tr>
+                        <tr>
+                            <td>Hematocrito (Hct)</td>
+                            <td>15.6%</td>
+                            <td>38.8% - 50.0%.</td>
+                        </tr>
+                        <tr>
+                            <td>Glóbulos Blancos (Leucocitos):</td>
+                            <td>2,300 células/mm³</td>
+                            <td>4,500 - 11,000 células por microlitro (µL) o células/mm³.</td>
+                        </tr>
+                        <tr>
+                            <td>Plaquetas (Trombocitos):</td>
+                            <td>96,000 plaquetas/mm³</td>
+                            <td>150,000 - 450,000 plaquetas por microlitro (µL) o plaquetas/mm³</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <h2>Grafica resultados Glóbulos Rojos </h2>
+                    <canvas id="resultadohemograma"></canvas>
+            </div>
+            </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+<script src="/assets/js/graficos.js"></script>
+<script src="/assets/js/logica.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</html>
