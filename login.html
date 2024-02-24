@@ -36,6 +36,11 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script
+			  src="https://code.jquery.com/jquery-3.7.1.min.js"
+			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			  crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -133,6 +138,51 @@
         </p>
       </div>
     </section>
+
+    <section class="appointment section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Regístrate</h2>
+          <p>A continuación, rellena el siguiente formulario para registrarte.</p>
+        </div>
+
+        <form id="registro">
+          <div class="row">
+            <div class="col-md-4 form-group">
+              <p>Nombre</p>
+              <label for="nombre"></label>
+              <input type="name" id="nombre" class="form-control" required>
+
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <p>Correo Electrónico</p>
+              <label for="usuario"></label>
+              <input type="email" id="usuario" class="form-control" required>
+
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <p>Teléfono</p>
+              <label for="telefono"></label>
+              <input type="phone" id="telefono" class="form-control" required>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 form-group mt-3">
+              <p>Contraseña</p>
+              <label for="contraseña"></label>
+              <input type="password" id="contraseña" class="form-control" required>
+
+            </div>
+          </div>
+
+          <div class="text-center"><button class="botonregistrar btn btn-primary" type="submit">Regístrate</button></div>
+        </form>
+
+      </div>
+    </section>
+
 
   </main><!-- End #main -->
 

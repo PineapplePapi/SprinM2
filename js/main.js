@@ -21,7 +21,27 @@ usuarios.push(usuario2);
 // const usuario = usuarios[0];
 // console.log(usuario.nombre);
 
-//Accede al boton de "Inicar Sesión del formulario"
+const page = window.location.pathname;
+
+
+  $(document).ready(function(){
+    $('#registro').submit(function(event) {
+    
+        event.preventDefault();
+    
+        registrarUsuario()
+
+        console.log(usuarios)
+    
+          function registrarUsuario(){
+              usuarios.push({
+                  nombre: $('#usuario').val(),
+                  password: $('#contraseña').val()
+              })
+      }
+    })})
+
+  //Accede al boton de "Inicar Sesión del formulario"
 const btn = document.getElementById("login");
 
 //Escucha el evento "click" del botón
@@ -39,7 +59,7 @@ btn.addEventListener("click", () => {
     const password = document.getElementById("exampleInputPassword1").value;
 
     //Condicional if que verifica si el correo y la contraseña ingresadas pertenecen a algún usuario en la lista usuarios.
-    if (correo == usuarios[0].nombre && password == usuarios[0].password) {
+    if (usuarios.find(user => user.nombre === correo && user.password === password)) {
       //Condicional si es que las credenciales son correctas.
 
       //Va hacia el archivo "control-panel-html"
@@ -50,3 +70,9 @@ btn.addEventListener("click", () => {
     }
   });
 });
+
+
+
+//registro de usuarios//
+
+// registrar usuario ? sirve, obvio que si :)
