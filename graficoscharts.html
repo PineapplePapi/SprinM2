@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gráficos</title>
-    <script src="/js/scriptgraficos.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script
-			  src="https://code.jquery.com/jquery-3.7.1.min.js"
-			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-			  crossorigin="anonymous"></script>
-
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+    <script src="js/scriptgraficos.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+    <style>
+        .hidden {
+          display: none;
+        }
+    </style>
 </head>
+
 <body>
-    <div style="width: 600px">
+    <!-- <div style="width: 600px">
         <canvas id="graficaplipidico"></canvas>
     </div>
     <div style="width: 600px">
@@ -24,72 +33,57 @@
     </div>
     <div style="width: 600px">
         <canvas id="graficaplipidico4"></canvas>
-    </div>
-</div>
+    </div> -->
 
-<footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
+    <div class="container d-none" id="history-toggle">
+    <div class="col-8">
+    <div class="container">
         <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Medilab</h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="/index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/index.html?#about">Sobre nosotros</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/index.html?#services">Servicios</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a >Condiciones de Servicios</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a >Politica de privacidad</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Unéte y actualizate con las ultimas noticias de Medilab</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-
+        <table id="tabla-perfil-lipidico" class="table table-bordered hidden">
+            <caption>Rango de valores Perfil Lipídico </caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Deseable</th>
+              <th>Límite</th>
+              <th>Alto Riesgo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Colesterol HDL [mg/dL] </td>
+              <td>60</td>
+              <td>35 - 45</td>
+              <td> &lt;35 </td>
+            </tr>
+            <tr>
+              <td>Colesterol LDL [mg/dL] </td>
+              <td> 60 - 130</td>
+              <td> 130 - 159 </td>
+              <td>160 - 189 </td>
+            </tr>
+            <tr>
+              <td>Triglicéridos [mg/dL]</td>
+              <td> &lt;150 </td>
+              <td>150 - 199 </td>
+              <td>200 - 499 </td>
+            </tr>
+            <tr>
+              <td>Colesterol Total [mg/dL]</td>
+              <td> &lt;200 </td>
+              <td> 200 - 239</td>
+              <td>240</td>
+            </tr>
+           
+          </tbody>
+        </table>
         </div>
       </div>
     </div>
-
-    <div class="container d-md-flex py-4">
-
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Medilab</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
     </div>
-  </footer><!-- End Footer -->
+
+     
+
 
 </body>
 </html>

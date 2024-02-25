@@ -73,7 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
           break;
         case "Perfíl Lipídico":
           header.innerText = "Examen de Perfíl Lipídico";
-          
+
+          $("#perfil-lipidico-table").removeClass("d-none");
           btncolesterol.classList.remove("d-none")
           btncolesterol2.classList.remove("d-none")
           btncolesterol3.classList.remove("d-none")
