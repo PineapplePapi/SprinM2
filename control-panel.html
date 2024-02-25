@@ -245,11 +245,11 @@
                                     Perfíl Lipídico
                                   </button>
                               </li>
-                              <li class="list-group-item boton">
+                              <!-- <li class="list-group-item boton">
                                 <button class="btn">
                                   Colesterol
                                 </button>
-                              </li >
+                              </li > -->
                               <li class="list-group-item boton">
                                 <button class="btn">
                                   Triglicéridos
@@ -281,6 +281,7 @@
                                 <h3 id="header-examen">
                                   
                                 </h3>
+                                
                               </div>
                             </div>
                           
@@ -289,6 +290,52 @@
                           <div class="row">
                             <!-- Segunda Fila -->
                             <div class="col-md-12">
+                              <div class="container d-none" id="history-toggle">
+                                <div class="col-8">
+                                <div class="container">
+                                    <div class="row">
+                                    <table id="tabla-perfil-lipidico" class="table table-bordered hidden">
+                                        <caption>Rango de valores Perfil Lipídico </caption>
+                                      <thead>
+                                        <tr>
+                                          <th></th>
+                                          <th>Deseable</th>
+                                          <th>Límite</th>
+                                          <th>Alto Riesgo</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>Colesterol HDL [mg/dL] </td>
+                                          <td>60</td>
+                                          <td>35 - 45</td>
+                                          <td> &lt;35 </td>
+                                        </tr>
+                                        <tr>
+                                          <td>Colesterol LDL [mg/dL] </td>
+                                          <td> 60 - 130</td>
+                                          <td> 130 - 159 </td>
+                                          <td>160 - 189 </td>
+                                        </tr>
+                                        <tr>
+                                          <td>Triglicéridos [mg/dL]</td>
+                                          <td> &lt;150 </td>
+                                          <td>150 - 199 </td>
+                                          <td>200 - 499 </td>
+                                        </tr>
+                                        <tr>
+                                          <td>Colesterol Total [mg/dL]</td>
+                                          <td> &lt;200 </td>
+                                          <td> 200 - 239</td>
+                                          <td>240</td>
+                                        </tr>
+                                       
+                                      </tbody>
+                                    </table>
+                                    </div>
+                                  </div>
+                                </div>
+                                </div>
                               <div class="p-2" id="grafico">
                                 <canvas id="grafica"></canvas>
                                 <button class="btn d-none btn-success" id="btncolesterol">
