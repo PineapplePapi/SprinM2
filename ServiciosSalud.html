@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Inner Page - Medilab Bootstrap Template</title>
+  <title>Proveedores- Medilab</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -28,6 +28,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Medilab
@@ -36,10 +37,14 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+
   <script
-			  src="https://code.jquery.com/jquery-3.7.1.min.js"
-			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-			  crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -71,17 +76,17 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="/index.html">Home</a></li>
+          <li><a class="nav-link scrollto active" href="/index.html?#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="/index.html?#about">Sobre nosotros</a></li>
           <li><a class="nav-link scrollto" href="/index.html?#services">Servicios</a></li>
-          <li><a class="nav-link scrollto" href="#laregistrasion">Registrarse</a></li>
+          <li><a class="nav-link scrollto" href="login.html?#laregistrasion">Registrarse</a></li>
           <li><a class="nav-link scrollto" href="/index.html?#doctors">Doctores</a></li>
           <li><a class="nav-link scrollto" href="/index.html?#contact">Contacto</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
+      </nav><!-- .navbar -->
+
       <a href="login.html" class="appointment-btn scrollto"><span class="d-none d-md-inline">Iniciar Sesión</span></a>
-      <a href="index.html" class="appointment-btn scrollto"><span class="d-none d-md-inline">Volver</span></a>
 
     </div>
   </header><!-- End Header -->
@@ -93,79 +98,73 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Inicio de Sesión</h2>
+          <h2>Proveedores de servicios de Salud</h2>
           <ol>
-            <li><a href="index.html">Inicio</a></li>
-            <li>Inicio Sesión</li>
+            <li><a href="index.html">Home</a></li>
+            <li>Proveedores de servicios de Salud</li>
           </ol>
         </div>
 
       </div>
     </section><!-- End Breadcrumbs Section -->
-
-    <section class="inner-page">
-      <div class="container">
-        <p>
-          <form id="form_login">
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            
-            <button class="btn btn-primary" id="login">Iniciar Sesión</button>
-          </form>
-        </p>
+    <hr>
+    <section class="d-flex justify-content-between align-items-center">
+      <div style="padding-left: 50px;">
+        <h2>Hospitales</h2>
+      </div>
+      <div class="grilla">
+        <a href="https://www.redclinica.cl/"><img src="/assets/img/hospitaluchile.png" alt=""></a>
+        <a href="https://www.hsalvador.cl/"><img src="/assets/img/hospitalelsalvador.png" alt=""></a>
+        <a href="http://www.hms.cl/"><img src="/assets/img/hospitalmilitar.jpg" alt=""></a>
+        <a href="https://www.hospitalbarrosluco.gob.cl/"><img src="/assets/img/hospitalbarrosluco.png" alt=""></a>
+        <a href="https://www.hegc.gob.cl/"><img src="/assets/img/hospitalezequiel.jpg" alt=""></a>
+        <a href="https://hospitalmetropolitano.minsal.cl/"><img src="/assets/img/hospitalsantiago.png" alt=""></a>
       </div>
     </section>
-
-    <section id="laregistrasion" class="appointment section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Regístrate</h2>
-          <p>A continuación, rellena el siguiente formulario para registrarte.</p>
-        </div>
-
-        <form id="registro">
-          <div class="row">
-            <div class="col-md-4 form-group">
-              <p>Nombre</p>
-              <label for="nombre"></label>
-              <input type="name" id="nombre" class="form-control" required>
-
-            </div>
-            <div class="col-md-4 form-group mt-3 mt-md-0">
-              <p>Correo Electrónico</p>
-              <label for="usuario"></label>
-              <input type="email" id="usuario" class="form-control" required>
-
-            </div>
-            <div class="col-md-4 form-group mt-3 mt-md-0">
-              <p>Teléfono</p>
-              <label for="telefono"></label>
-              <input type="phone" id="telefono" class="form-control" required>
-
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 form-group mt-3">
-              <p>Contraseña</p>
-              <label for="contraseña"></label>
-              <input type="password" id="contraseña" class="form-control" required>
-
-            </div>
-          </div>
-
-          <div class="text-center"><button class="botonregistrar btn btn-primary" type="submit">Regístrate</button></div>
-        </form>
-
+    <hr>
+    <section class="d-flex justify-content-between align-items-center">
+      <div style="padding: 50px;">
+        <h2>Clínicas</h2>
+      </div>
+      <div class="grilla">
+        <a href="https://www.clinicasantarosa.cl/"><img src="/assets/img/Clinicas/clinicasantarosa.png" alt=""></a>
+        <a href="https://www.redsalud.cl/"><img src="/assets/img/Clinicas/clinicaredsalud.png" alt=""></a>
+        <a href="https://www.clinicaalemana.cl/"><img src="/assets/img/Clinicas/clinicaalemana.png" alt=""></a>
+        <a href="https://clinicajuanbosco.cl/"><img src="/assets/img/Clinicas/clinicajuanbosco.PNG" alt=""></a>
+        <a href="https://www.ucchristus.cl/"><img src="/assets/img/Clinicas/clinicauc.jpg" alt=""></a>
+        <a href="https://clinicacentralsantiago.cl/"><img src="/assets/img/Clinicas/clinicacentralsantiago.png" alt=""></a>
+        <a href="https://www.indisa.cl/"><img src="/assets/img/Clinicas/clinicaindisa.png" alt=""></a>
       </div>
     </section>
-
+    <hr>
+    <section class="d-flex justify-content-between align-items-center">
+      <div style="padding: 50px;">
+        <h2>Ambulancias</h2>
+      </div>
+      <div class="grilla">
+        <a href="https://www.ambulanciasantiago.cl/#page"><img src="/assets/img/ambulancias/ambulanciassantiago.png" alt=""></a>
+        <a href="http://www.emslifecare.cl/"><img src="/assets/img/ambulancias/ambulanciasems.jpg" alt=""></a>
+        <a href="https://samu.cl/"><img src="/assets/img/ambulancias/ambulanciassamu.png" alt=""></a>
+        <a href="https://www.ambulanciarescatehelp.cl/"><img src="/assets/img/ambulancias/ambulanciashelp.png" alt=""></a>
+        <a href="https://www.ambulanciasfalcon.cl/"><img src="/assets/img/ambulancias/ambulanciasfalcon.png" alt=""></a>
+        <a href="https://www.ambulanciasfalcon.cl/"><img src="/assets/img/ambulancias/ambulanciasurban.png" alt=""></a>
+      </div>
+    </section>
+    <hr>
+    <section class="d-flex justify-content-between align-items-center">
+      <div style="padding: 50px;">
+        <h2>Fonasa e Isapres</h2>
+      </div>
+      <div class="grilla">
+        <a href="https://www.fonasa.cl/sites/fonasa/inicio"><img src="/assets/img/fonasaeisapres/fonasa.png" alt=""></a>
+        <a href="www.banmedica.cl"><img src="/assets/img/fonasaeisapres/banmedica.jpg" alt=""></a>
+        <a href="www.cruzblanca.cl"><img src="/assets/img/fonasaeisapres/cruzblanca.png" alt=""></a>
+        <a href="www.colmena.cl"><img src="/assets/img/fonasaeisapres/colmena.png" alt=""></a>
+        <a href="www.nuevamasvida.cl"><img src="/assets/img/fonasaeisapres/nuevamasvida.png" alt=""></a>
+        <a href="www.somosesencial.cl"><img src="/assets/img/fonasaeisapres/esencial.png" alt=""></a>
+      </div>
+    </section>
+    <hr>
 
   </main><!-- End #main -->
 
@@ -238,14 +237,16 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></scrip>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="/js/main.js"></script>
+
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
 
 </body>
 
