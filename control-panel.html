@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Inner Page - Medilab Bootstrap Template</title>
+  <title>Perfil - Medilab</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -41,6 +41,9 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <link rel="stylesheet" href="/assets/css/calendar.css">
+
 </head>
 
 <body>
@@ -71,39 +74,25 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#departments">Departments</a></li>
-          <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto active" href="/index.html?#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="/index.html?#about">Sobre nosotros</a></li>
+          <li><a class="nav-link scrollto" href="/index.html?#services">Servicios</a></li>
+          <li><a class="nav-link scrollto" href="login.html?#laregistrasion">Registrarse</a></li>
+          <li><a class="nav-link scrollto" href="/index.html?#doctors">Doctores</a></li>
+          <li><a class="nav-link scrollto" href="/index.html?#contact">Contacto</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
+      <a type="button" class="btn appointment-btn scrollto" data-bs-target="#staticBackdrop" href="/agenda.html">
+        Revisa tu Agenda
+      </a>
+      
 
     </div>
   </header><!-- End Header -->
 
-  <main id="main">
+  <main id="main" class="py-4">
 
     <!-- ======= Breadcrumbs Section ======= -->
     <section class="breadcrumbs">
@@ -127,9 +116,9 @@
                 <div class="col-lg-4">
                   <div class="card mb-4">
                     <div class="card-body text-center">
-                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
-                        class="rounded-circle img-fluid" style="width: 150px;">
-                      <h5 class="my-3">Juan Alberto</h5>
+                      <img src="/assets/img/xokas.jpeg" alt="avatar"
+                        class=" " style="width: 250px;">
+                      <h5 class="my-3" id="nombreGrande">Juan Medina Correa</h5>
                    
                     </div>
                   </div>
@@ -144,10 +133,9 @@
                           <button class="mb-0 btn btn-primary" id="history">Historico de Exámenes</button>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                            <button class="mb-0 btn btn-primary">Familiares</button>
+                            <button class="mb-0 btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="infopersonal">Editar Información Personal</button>
                         </li>
-                        
-                    
+                      
                       </ul>
                     </div>
                   </div>
@@ -161,10 +149,10 @@
                         </div>
                       <div class="row">
                         <div class="col-sm-3">
-                          <p class="mb-0">Nombre Completo</p>
+                          <p class="mb-0" >Nombre Completo</p>
                         </div>
                         <div class="col-sm-9">
-                          <p class="text-muted mb-0">Juan Alberto Medina Correa</p>
+                          <p class="text-muted mb-0" id="nombre-completo">Juan Alberto Medina Correa</p>
                         </div>
                       </div>
                       <hr>
@@ -173,16 +161,16 @@
                           <p class="mb-0">Edad</p>
                         </div>
                         <div class="col-sm-9">
-                          <p class="text-muted mb-0">77 Años</p>
+                          <p class="text-muted mb-0" id="edad">77 Años</p>
                         </div>
                       </div>
                       <hr>
                       <div class="row">
                         <div class="col-sm-3">
-                          <p class="mb-0">Email</p>
+                          <p class="mb-0" >Email</p>
                         </div>
                         <div class="col-sm-9">
-                          <p class="text-muted mb-0">juan@gmail.com</p>
+                          <p class="text-muted mb-0" id="email">juan@gmail.com</p>
                         </div>
                       </div>
                       <hr>
@@ -191,7 +179,7 @@
                           <p class="mb-0">Teléfono</p>
                         </div>
                         <div class="col-sm-9">
-                          <p class="text-muted mb-0">+569 1234 5678</p>
+                          <p class="text-muted mb-0"  id="telefono">+569 1234 5678</p>
                         </div>
                       </div>
                       <hr>
@@ -200,28 +188,36 @@
                           <p class="mb-0">Salud</p>
                         </div>
                         <div class="col-sm-9">
-                          <p class="text-muted mb-0">Fonasa B</p>
+                          <p class="text-muted mb-0"  id="salud">Fonasa B</p>
                         </div>
                       </div>
                       <hr>
                       <div class="row">
                         <div class="col-sm-3">
-                          <p class="mb-0">Dirección</p>
+                          <p class="mb-0" >Dirección</p>
                         </div>
                         <div class="col-sm-9">
-                          <p class="text-muted mb-0">Los Ángeles, Bío-Bío, Chile.</p>
+                          <p class="text-muted mb-0" id="direccion">Los Ángeles, Bío-Bío, Chile.</p>
                         </div>
                       </div>
                       <hr>
                       <div class="row">
                         <div class="col-sm-3">
-                          <p class="mb-0">Ocupación</p>
+                          <p class="mb-0" >Ocupación</p>
                         </div>
                         <div class="col-sm-9">
-                          <p class="text-muted mb-0">Jubilado</p>
+                          <p class="text-muted mb-0" id="ocupacion">Streamer</p>
                         </div>
                       </div>
-
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <p class="mb-0" >Familiares</p>
+                        </div>
+                        <div class="col-sm-9">
+                          <p class="text-muted mb-0" id="familia">Ibai Llanos, Rubius, Windi </p>
+                        </div>
+                      </div>
                       
                     </div>
                   </div>
@@ -229,11 +225,70 @@
               </div>
               </div>
             </div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Información Personal</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+
+      <div class="modal-body">
+
+
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="input-nombre" aria-describedby="emailHelp">
+            
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Edad</label>
+            <input type="text" class="form-control" id="input-edad">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Email</label>
+            <input type="text" class="form-control" id="input-email">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Teléfono</label>
+            <input type="text" class="form-control" id="input-telefono">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Salud</label>
+            <input type="text" class="form-control" id="input-salud">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Dirección
+            </label>
+            <input type="text" class="form-control" id="input-direccion">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Ocupación</label>
+            <input type="text" class="form-control" id="input-ocupacion">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Familiares</label>
+            <input type="text" class="form-control" id="input-familia">
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+        <button type="button" class="btn btn-primary" id="guardarcambios" data-bs-dismiss="modal">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
             <div class="container d-none" id="history-toggle">
                 <div class="col-lg-12">
                     <div class="container">
                       <div class="row">
-                        <div class="col-4">
+                        <div class="col-2">
                           <ul class="list-group">
                               <li class="list-group-item boton">
                                   <button class="btn">
@@ -272,13 +327,13 @@
                               </li>
                           </ul>
                       </div>
-                      <div class="col-8">
+                      <div class="col-10">
                         <div class="container">
                           <div class="row">
                             <!-- Primera Fila -->
                             <div class="col-md-12">
                               <div class="p-2">
-                                <h3 id="header-examen">
+                                <h3 id="header-examen" class="text-center">
                                   
                                 </h3>
                                 
@@ -293,8 +348,9 @@
                                 <canvas id="grafica"></canvas>
                                 <div class="container">
                                   <div class="row">
-                                    <table id="tablahemograma" class="table table-bordered d-none">
-                                      <caption> Tabla Valores Históricos Hemograma </caption>
+                                    
+                                    <table id="tablahemograma" class="table table-bordered d-none caption-top mt-5">
+                                      <caption class="fs-2 text-center">Tabla Valores Históricos Hemograma</caption>
                                       <thead>
                                         <tr>
                                           <th></th>
@@ -334,25 +390,27 @@
                                     </table>
                                   </div>
                                 </div>
+                                <div class="d-flex justify-content-center align-items-center gap-3 mb-3">
+                                  <button class="btn d-none btn-success" id="btncolesterol">
+                                    Colesterol HDL
+                                  </button>
+                                  <button class="btn d-none btn-success" id="btncolesterolldl">
+                                    Colesterol LDL
+                                  </button>
+                                  <button class="btn d-none btn-success" id="btncolesteroltotal">
+                                    Colesterol Total
+                                  </button>
+                                  <button class="btn d-none btn-success" id="btntrigliceridos">
+                                    Triglicéridos
+                                  </button>
+                                </div>
                                 
-                                <button class="btn d-none btn-success" id="btncolesterol">
-                                  Colesterol HDL
-                                </button>
-                                <button class="btn d-none btn-success" id="btncolesterolldl">
-                                  Colesterol LDL
-                                </button>
-                                <button class="btn d-none btn-success" id="btncolesteroltotal">
-                                  Colesterol Total
-                                </button>
-                                <button class="btn d-none btn-success" id="btntrigliceridos">
-                                  Triglicéridos
-                                </button>
                                   
   
                                 <div class="container">
                                     <div class="row">
-                                    <table id="tablareflipidico" class="table table-bordered d-none">
-                                      <caption>Rango de valores Perfil Lipídico </caption>
+                                    <table id="tablareflipidico" class="table table-bordered d-none caption-top">
+                                      <caption class="fs-2 text-center">Rango de valores Perfil Lipídico </caption>
                                       <thead>
                                         <tr>
                                           <th></th>
@@ -395,8 +453,8 @@
 
                                   <div class="container">
                                     <div class="row">
-                                    <table id="tablaperfillipidico" class="table table-bordered d-none">
-                                      <caption>Valores Históricos Perfil Lipídico </caption>
+                                    <table id="tablaperfillipidico" class="table table-bordered d-none caption-top">
+                                      <caption class="fs-2 text-center">Valores Históricos Perfil Lipídico </caption>
                                       <thead>
                                         <tr>
                                           <th></th>
@@ -435,8 +493,8 @@
 
                                   <div class="container">
                                     <div class="row">
-                                      <table id="tablaorina" class="table table-bordered">
-                                        <caption> Tabla Valores Históricos Análisis de Orina </caption>
+                                      <table id="tablaorina" class="table table-bordered caption-top">
+                                        <caption class="fs-2 text-center"> Tabla Valores Históricos Análisis de Orina </caption>
                                         <thead>
                                           <tr>
                                             <th></th>
@@ -475,8 +533,8 @@
                             
                                   <div class="container">
                                     <div class="row">
-                                      <table id="tablaexamenorina" class="table table-bordered">
-                                        <caption> Tabla Valores Históricos Examen Químico de Orina </caption>
+                                      <table id="tablaexamenorina" class="table table-bordered caption-top">
+                                        <caption class="fs-2 text-center"> Tabla Valores Históricos Examen Químico de Orina </caption>
                                         <thead>
                                           <tr>
                                             <th></th>
@@ -531,27 +589,18 @@
 
                                   <div class="container">
                                     <div class="row">
-                                      <table id="tablaperfilbio" class="table table-bordered">
-                                        <caption> Tabla Valores Históricos Perfil Bioquímico </caption>
+                                      <table id="tablaperfilbio" class="table table-bordered caption-top">
+                                        <caption class="fs-2 text-center"> Tabla Valores Históricos Perfil Bioquímico </caption>
                                         <thead>
                                           <tr>
                                             <th></th>
-                                            <th>Glucosa [mg/dL]</th>
-                                            <th>Nitrógeno Ureico [mg/dL]</th>
-                                            <th> Urea [mg/dL] </th>
-                                            <th> Ácido Úrico [mg/dL] </th>
-                                            <th> Colesterol Total [mg/dL] </th>
-                                            <th> Proteínas Totales [g/dL]</th>
-                                            <th>Albúmina [g/dL]</th>
-                                            <th>Globulina [g/dL] </th>
-                                            <th> Bilirrubina Total[mg/dL] </th>
-                                            <th>Transaminasa Got-Ast [u/L]</th>
-                                            <th>Transaminasa Gpt-Alt [u/L]</th>
-                                            <th>G-Glutamiltransferasa [U/L]</th>
-                                            <th>Deshidrogenasa Láctica [UI/L]</th>
-                                            <th>Fosfatasas alcalinas [u/L]</th>
-                                            <th>Calcio [mg/dL] </th>
-                                            <th>Fósforo [mg/dL]</th>
+                                            <th>Glucosa</th>
+                                            <th>Nitrógeno Ureico</th>
+                                            <th>Urea</th>
+                                            <th>Ácido Úrico</th>
+                                            <th>Colesterol Total</th>
+                                            <th>Proteínas Totales</th>
+                                            
                                   
                                           </tr>
                                         </thead>
@@ -564,16 +613,7 @@
                                             <th> 5o </th>
                                             <th> 252 </th>
                                             <th> 6.9 </th>
-                                            <th>4.1</th>
-                                            <th>2.8 </th>
-                                            <th> 0.4 </th>
-                                            <th>25</th>
-                                            <th>28</th>
-                                            <th>10</th>
-                                            <th>109</th>
-                                            <th>200</th>
-                                            <th>8.9</th>
-                                            <th>2.9</th>
+                                            
                                           </tr>
                                           <tr>
                                             <th>Diciembre 2023</th>
@@ -583,16 +623,7 @@
                                             <th> 4.8 </th>
                                             <th> 241 </th>
                                             <th> 7.1 </th>
-                                            <th>4.2</th>
-                                            <th>2.9 </th>
-                                            <th>0.4</th>
-                                            <th>26</th>
-                                            <th>29</th>
-                                            <th>8</th>
-                                            <th>118</th>
-                                            <th>205</th>
-                                            <th>9</th>
-                                            <th>3.2 </th>
+                                            
                                           </tr>
                                           <tr>
                                             <th> Febrero 2024 </th>
@@ -602,16 +633,6 @@
                                             <th> 4.7 </th>
                                             <th> 235 </th>
                                             <th> 7.8 </th>
-                                            <th>4.9</th>
-                                            <th>2.9 </th>
-                                            <th>0.5 </th>
-                                            <th>27</th>
-                                            <th>30</th>
-                                            <th>9</th>
-                                            <th>122</th>
-                                            <th>207</th>
-                                            <th>9.1</th>
-                                            <th>3.6</th>
                                           </tr>
                                         </tbody>
                                       </table>
@@ -621,8 +642,8 @@
 
                                   <div class="container">
                                     <div class="row">
-                                      <table id="tablacoagulacion" class="table table-bordered">
-                                        <caption> Tabla Valores Históricos Tiempo de Protrombina </caption>
+                                      <table id="tablacoagulacion" class="table table-bordered caption-top">
+                                        <caption class="fs-2 text-center"> Tabla Valores Históricos Tiempo de Protrombina </caption>
                                         <thead>
                                           <tr>
                                             <th></th>
@@ -650,9 +671,6 @@
                                       </table>
                                     </div>
                                   </div>
-                               
-                              
-                                
                               </div>
                             </div>
                           
@@ -668,6 +686,71 @@
           </section>
       </div>
     </section>
+
+    <footer id="footer">
+
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+  
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3>Medilab</h3>
+              <p>
+                A108 Adam Street <br>
+                New York, NY 535022<br>
+                United States <br><br>
+                <strong>Teléfono:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+            </div>
+  
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>Links</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="/index.html">Home</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="/index.html?#about">Sobre nosotros</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="/index.html?#services">Servicios</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a >Condiciones de Servicios</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a >Politica de privacidad</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 footer-newsletter">
+              <h4>Unéte y actualizate con las ultimas noticias de Medilab</h4>
+              <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+              <form action="" method="post">
+                <input type="email" name="email"><input type="submit" value="Subscribe">
+              </form>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+      <div class="container d-md-flex py-4">
+  
+        <div class="me-md-auto text-center text-md-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>Medilab</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
+            Designed by <a href="https://bootstrapmade.com/">Grupo 1</a>
+          </div>
+        </div>
+        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+    </footer><!-- End Footer -->
+  
 
   </main><!-- End #main -->
 
@@ -688,7 +771,235 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+  <script>
+    function CalendarControl() {
+    const calendar = new Date();
+    const calendarControl = {
+      localDate: new Date(),
+      prevMonthLastDate: null,
+      calWeekDays: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      calMonthName: [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ],
+      daysInMonth: function (month, year) {
+        return new Date(year, month, 0).getDate();
+      },
+      firstDay: function () {
+        return new Date(calendar.getFullYear(), calendar.getMonth(), 1);
+      },
+      lastDay: function () {
+        return new Date(calendar.getFullYear(), calendar.getMonth() + 1, 0);
+      },
+      firstDayNumber: function () {
+        return calendarControl.firstDay().getDay() + 1;
+      },
+      lastDayNumber: function () {
+        return calendarControl.lastDay().getDay() + 1;
+      },
+      getPreviousMonthLastDate: function () {
+        let lastDate = new Date(
+          calendar.getFullYear(),
+          calendar.getMonth(),
+          0
+        ).getDate();
+        return lastDate;
+      },
+      navigateToPreviousMonth: function () {
+        calendar.setMonth(calendar.getMonth() - 1);
+        calendarControl.attachEventsOnNextPrev();
+      },
+      navigateToNextMonth: function () {
+        calendar.setMonth(calendar.getMonth() + 1);
+        calendarControl.attachEventsOnNextPrev();
+      },
+      navigateToCurrentMonth: function () {
+        let currentMonth = calendarControl.localDate.getMonth();
+        let currentYear = calendarControl.localDate.getFullYear();
+        calendar.setMonth(currentMonth);
+        calendar.setYear(currentYear);
+        calendarControl.attachEventsOnNextPrev();
+      },
+      displayYear: function () {
+        let yearLabel = document.querySelector(".calendar .calendar-year-label");
+        yearLabel.innerHTML = calendar.getFullYear();
+      },
+      displayMonth: function () {
+        let monthLabel = document.querySelector(
+          ".calendar .calendar-month-label"
+        );
+        monthLabel.innerHTML = calendarControl.calMonthName[calendar.getMonth()];
+      },
+      selectDate: function (e) {
+        console.log(
+          `${e.target.textContent} ${
+            calendarControl.calMonthName[calendar.getMonth()]
+          } ${calendar.getFullYear()}`
+        );
+      },
+      plotSelectors: function () {
+        document.querySelector(
+          ".calendar"
+        ).innerHTML += `<div class="calendar-inner"><div class="calendar-controls">
+          <div class="calendar-prev"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><path fill="#666" d="M88.2 3.8L35.8 56.23 28 64l7.8 7.78 52.4 52.4 9.78-7.76L45.58 64l52.4-52.4z"/></svg></a></div>
+          <div class="calendar-year-month">
+          <div class="calendar-month-label"></div>
+          <div>-</div>
+          <div class="calendar-year-label"></div>
+          </div>
+          <div class="calendar-next"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><path fill="#666" d="M38.8 124.2l52.4-52.42L99 64l-7.77-7.78-52.4-52.4-9.8 7.77L81.44 64 29 116.42z"/></svg></a></div>
+          </div>
+          <div class="calendar-today-date">Today: 
+            ${calendarControl.calWeekDays[calendarControl.localDate.getDay()]}, 
+            ${calendarControl.localDate.getDate()}, 
+            ${calendarControl.calMonthName[calendarControl.localDate.getMonth()]} 
+            ${calendarControl.localDate.getFullYear()}
+          </div>
+          <div class="calendar-body"></div></div>`;
+      },
+      plotDayNames: function () {
+        for (let i = 0; i < calendarControl.calWeekDays.length; i++) {
+          document.querySelector(
+            ".calendar .calendar-body"
+          ).innerHTML += `<div>${calendarControl.calWeekDays[i]}</div>`;
+        }
+      },
+      plotDates: function () {
+        document.querySelector(".calendar .calendar-body").innerHTML = "";
+        calendarControl.plotDayNames();
+        calendarControl.displayMonth();
+        calendarControl.displayYear();
+        let count = 1;
+        let prevDateCount = 0;
+  
+        calendarControl.prevMonthLastDate = calendarControl.getPreviousMonthLastDate();
+        let prevMonthDatesArray = [];
+        let calendarDays = calendarControl.daysInMonth(
+          calendar.getMonth() + 1,
+          calendar.getFullYear()
+        );
+        // dates of current month
+        for (let i = 1; i < calendarDays; i++) {
+          if (i < calendarControl.firstDayNumber()) {
+            prevDateCount += 1;
+            document.querySelector(
+              ".calendar .calendar-body"
+            ).innerHTML += `<div class="prev-dates"></div>`;
+            prevMonthDatesArray.push(calendarControl.prevMonthLastDate--);
+          } else {
+            document.querySelector(
+              ".calendar .calendar-body"
+            ).innerHTML += `<div class="number-item" data-num=${count}><a class="dateNumber" href="#">${count++}</a></div>`;
+          }
+        }
+        //remaining dates after month dates
+        for (let j = 0; j < prevDateCount + 1; j++) {
+          document.querySelector(
+            ".calendar .calendar-body"
+          ).innerHTML += `<div class="number-item" data-num=${count}><a class="dateNumber" href="#">${count++}</a></div>`;
+        }
+        calendarControl.highlightToday();
+        calendarControl.plotPrevMonthDates(prevMonthDatesArray);
+        calendarControl.plotNextMonthDates();
+      },
+      attachEvents: function () {
+        let prevBtn = document.querySelector(".calendar .calendar-prev a");
+        let nextBtn = document.querySelector(".calendar .calendar-next a");
+        let todayDate = document.querySelector(".calendar .calendar-today-date");
+        let dateNumber = document.querySelectorAll(".calendar .dateNumber");
+        prevBtn.addEventListener(
+          "click",
+          calendarControl.navigateToPreviousMonth
+        );
+        nextBtn.addEventListener("click", calendarControl.navigateToNextMonth);
+        todayDate.addEventListener(
+          "click",
+          calendarControl.navigateToCurrentMonth
+        );
+        for (var i = 0; i < dateNumber.length; i++) {
+            dateNumber[i].addEventListener(
+              "click",
+              calendarControl.selectDate,
+              false
+            );
+        }
+      },
+      highlightToday: function () {
+        let currentMonth = calendarControl.localDate.getMonth() + 1;
+        let changedMonth = calendar.getMonth() + 1;
+        let currentYear = calendarControl.localDate.getFullYear();
+        let changedYear = calendar.getFullYear();
+        if (
+          currentYear === changedYear &&
+          currentMonth === changedMonth &&
+          document.querySelectorAll(".number-item")
+        ) {
+          document
+            .querySelectorAll(".number-item")
+            [calendar.getDate() - 1].classList.add("calendar-today");
+        }
+      },
+      plotPrevMonthDates: function(dates){
+        dates.reverse();
+        for(let i=0;i<dates.length;i++) {
+            if(document.querySelectorAll(".prev-dates")) {
+                document.querySelectorAll(".prev-dates")[i].textContent = dates[i];
+            }
+        }
+      },
+      plotNextMonthDates: function(){
+       let childElemCount = document.querySelector('.calendar-body').childElementCount;
+       //7 lines
+       if(childElemCount > 42 ) {
+           let diff = 49 - childElemCount;
+           calendarControl.loopThroughNextDays(diff);
+       }
+
+       //6 lines
+       if(childElemCount > 35 && childElemCount <= 42 ) {
+        let diff = 42 - childElemCount;
+        calendarControl.loopThroughNextDays(42 - childElemCount);
+       }
+
+      },
+      loopThroughNextDays: function(count) {
+        if(count > 0) {
+            for(let i=1;i<=count;i++) {
+                document.querySelector('.calendar-body').innerHTML += `<div class="next-dates">${i}</div>`;
+            }
+        }
+      },
+      attachEventsOnNextPrev: function () {
+        calendarControl.plotDates();
+        calendarControl.attachEvents();
+      },
+      init: function () {
+        calendarControl.plotSelectors();
+        calendarControl.plotDates();
+        calendarControl.attachEvents();
+      }
+    };
+    calendarControl.init();
+  }
+  
+  const calendarControl = new CalendarControl();
+  </script>
+
   
 </body>
+
+
 
 </html>
