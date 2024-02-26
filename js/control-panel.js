@@ -403,11 +403,64 @@ document.addEventListener("DOMContentLoaded", function () {
             tablaperfilbio.classList.add("d-none");
             tablacoagulacion.classList.add("d-none");
           }
-
           header.innerText = "Examen de Orina";
-
           tablaorina.classList.remove("d-none");
           tablaexamenorina.classList.remove("d-none");
+          $(document).ready(function () {
+            const labels = [
+              "Septiembre 2023",
+              "Diciembre 2023",
+              "Febrero 2024",
+            ];
+            const colors = ["#62e6e8", "#62e6e8", "#62e6e8"];
+
+            const data = {
+              labels: labels,
+              datasets: [
+                {
+                  label: "pH",
+                  data: [5.4, 5.5, 5.7],
+                  backgroundColor: colors,
+                },
+              ],
+            };
+
+            const config = {
+              type: "bar",
+              data: data,
+              options: {
+                responsive: true,
+                plugins: {
+                  title: {
+                    display: true,
+                    text: "Triglicéridos Últimos 3 exámenes",
+                  },
+                },
+                scales: {
+                  x: {
+                    title: {
+                      display: true,
+                      text: "Meses",
+                    },
+                  },
+                  y: {
+                    min: 5,
+                    max: 6,
+                    title: {
+                      display: true,
+                      text: "Triglicéridos en Sangre (mg/dL)",
+                    },
+                  },
+                },
+              },
+            };
+            if (grafico == null) {
+              grafico = new Chart(graph, config);
+            } else {
+              grafico.destroy();
+              grafico = new Chart(graph, config);
+            }
+          });
           break;
 
         case "Perfíl Bioquímico":
