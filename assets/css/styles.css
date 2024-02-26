@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    text-align: center;
+}
+
+.hospitales{
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+img{
+    height: 70px;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .grilla {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        text-align: center;
+    }
+    .hospitales{
+        margin-top: 30px;
+    }
+}
