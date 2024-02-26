@@ -122,48 +122,48 @@ document.addEventListener("DOMContentLoaded", function () {
           btncolesterolldl.classList.remove("d-none");
           btncolesteroltotal.classList.remove("d-none");
           btntrigliceridos.classList.remove("d-none");
-          const labels = ["Septiembre", "Diciembre", "Febrero"];
-          const colors = ["#C4EFF3", "#7BE7F1", "#36E0F0"];
+          const labels = ["Septiempre", "Diciembre", "Febrero"];
+
+          const dataset1 = {
+            label: "Colesterol HDL",
+            data: [47, 51, 56],
+            borderColor: "rgba(248, 37, 37, 0.8)",
+            fill: false,
+            tension: 0.1,
+          };
+
+          const dataset2 = {
+            label: "Colesterol LDL",
+            data: [205, 190, 179],
+            borderColor: "rgba(69, 248, 84, 0.8)",
+            fill: false,
+            tension: 0.1,
+          };
+
+          const dataset3 = {
+            label: "Triglicéridos",
+            data: [215, 200, 194],
+            borderColor: "rgba(69, 140, 248, 0.8)",
+            fill: false,
+            tension: 0.1,
+          };
+
+          const dataset4 = {
+            label: "Colesterol Total",
+            data: [254, 241, 235],
+            borderColor: "rgba(245, 40, 145, 0.8)",
+            fill: false,
+            tension: 0.1,
+          };
 
           const data = {
             labels: labels,
-            datasets: [
-              {
-                label: "Colesterol HDL en Sangre (mg/dL)",
-                data: [47, 51, 56],
-                backgroundColor: colors,
-              },
-            ],
+            datasets: [dataset1, dataset2, dataset3, dataset4],
           };
 
           const config = {
-            type: "bar",
+            type: "line",
             data: data,
-            options: {
-              responsive: true,
-              plugins: {
-                title: {
-                  display: true,
-                  text: "Colesterol HDL Últimos 3 exámenes",
-                },
-              },
-              scales: {
-                x: {
-                  title: {
-                    display: true,
-                    text: "Meses",
-                  },
-                },
-                y: {
-                  min: 30,
-                  max: 65,
-                  title: {
-                    display: true,
-                    text: "Valores Colesterol HDL en Sangre (mg/dL)",
-                  },
-                },
-              },
-            },
           };
           if (grafico == null) {
             grafico = new Chart(graph, config);

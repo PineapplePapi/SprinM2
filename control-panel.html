@@ -222,7 +222,7 @@
                 <div class="col-lg-12">
                     <div class="container">
                       <div class="row">
-                        <div class="col-4">
+                        <div class="col-2">
                           <ul class="list-group">
                               <li class="list-group-item boton">
                                   <button class="btn">
@@ -261,13 +261,13 @@
                               </li>
                           </ul>
                       </div>
-                      <div class="col-8">
+                      <div class="col-10">
                         <div class="container">
                           <div class="row">
                             <!-- Primera Fila -->
                             <div class="col-md-12">
                               <div class="p-2">
-                                <h3 id="header-examen">
+                                <h3 id="header-examen" class="text-center">
                                   
                                 </h3>
                                 
@@ -282,8 +282,9 @@
                                 <canvas id="grafica"></canvas>
                                 <div class="container">
                                   <div class="row">
-                                    <table id="tablahemograma" class="table table-bordered d-none">
-                                      <caption> Tabla Valores Históricos Hemograma </caption>
+                                    
+                                    <table id="tablahemograma" class="table table-bordered d-none caption-top mt-5">
+                                      <caption class="fs-2 text-center">Tabla Valores Históricos Hemograma</caption>
                                       <thead>
                                         <tr>
                                           <th></th>
@@ -323,25 +324,27 @@
                                     </table>
                                   </div>
                                 </div>
+                                <div class="d-flex justify-content-center align-items-center gap-3 mb-3">
+                                  <button class="btn d-none btn-success" id="btncolesterol">
+                                    Colesterol HDL
+                                  </button>
+                                  <button class="btn d-none btn-success" id="btncolesterolldl">
+                                    Colesterol LDL
+                                  </button>
+                                  <button class="btn d-none btn-success" id="btncolesteroltotal">
+                                    Colesterol Total
+                                  </button>
+                                  <button class="btn d-none btn-success" id="btntrigliceridos">
+                                    Triglicéridos
+                                  </button>
+                                </div>
                                 
-                                <button class="btn d-none btn-success" id="btncolesterol">
-                                  Colesterol HDL
-                                </button>
-                                <button class="btn d-none btn-success" id="btncolesterolldl">
-                                  Colesterol LDL
-                                </button>
-                                <button class="btn d-none btn-success" id="btncolesteroltotal">
-                                  Colesterol Total
-                                </button>
-                                <button class="btn d-none btn-success" id="btntrigliceridos">
-                                  Triglicéridos
-                                </button>
                                   
   
                                 <div class="container">
                                     <div class="row">
-                                    <table id="tablareflipidico" class="table table-bordered d-none">
-                                      <caption>Rango de valores Perfil Lipídico </caption>
+                                    <table id="tablareflipidico" class="table table-bordered d-none caption-top">
+                                      <caption class="fs-2 text-center">Rango de valores Perfil Lipídico </caption>
                                       <thead>
                                         <tr>
                                           <th></th>
@@ -384,8 +387,8 @@
 
                                   <div class="container">
                                     <div class="row">
-                                    <table id="tablaperfillipidico" class="table table-bordered d-none">
-                                      <caption>Valores Históricos Perfil Lipídico </caption>
+                                    <table id="tablaperfillipidico" class="table table-bordered d-none caption-top">
+                                      <caption class="fs-2 text-center">Valores Históricos Perfil Lipídico </caption>
                                       <thead>
                                         <tr>
                                           <th></th>
@@ -639,9 +642,6 @@
                                       </table>
                                     </div>
                                   </div>
-                               
-                              
-                                
                               </div>
                             </div>
                           

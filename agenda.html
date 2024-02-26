@@ -126,63 +126,9 @@
       </div>
     </section>
 
-    <div id='calendar'></div>
+    <div id='calendar' class="p-5"></div>
 
-  <script>
-
-    document.addEventListener('DOMContentLoaded', function() {
-      var calendarEl = document.getElementById('calendar');
-    
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        selectable: true,
-        events: [
-        {
-      title: 'Cita con el cirujano plástico',
-      start: '2024-02-27T14:30:00',
-      extendedProps: {
-        status: 'done'
-      }
-    },
-    {
-      title: 'Cita café',
-      start: '2024-02-27T17:30:00',
-      backgroundColor: 'green',
-      borderColor: 'green'
-    },
-    {
-      title: 'Exámenes de sangre',
-      start: '2024-02-29T09:30:00',
-      backgroundColor: 'green',
-      borderColor: 'green'
-    },
-    {
-      title: 'Resultados Ex. sangre',
-      start: '2024-03-04T14:30:00',
-      backgroundColor: 'green',
-      borderColor: 'green'
-    },
-  ],
-  eventDidMount: function(info) {
-    if (info.event.extendedProps.status === 'done') {
-
-      // Change background color of row
-      info.el.style.backgroundColor = 'red';
-
-      // Change color of dot marker
-      var dotEl = info.el.getElementsByClassName('fc-event-dot')[0];
-      if (dotEl) {
-        dotEl.style.backgroundColor = 'white';
-      }
-    }
-  },
   
-      });
-    
-      calendar.render();
-    });
-
-  </script>
 
   </main><!-- End #main -->
 
@@ -265,6 +211,61 @@
   <script src="assets/js/main.js"></script>
 
   <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+    
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        selectable: true,
+        events: [
+        {
+      title: 'Cita con el cirujano plástico',
+      start: '2024-02-27T14:30:00',
+      extendedProps: {
+        status: 'done'
+      }
+    },
+    {
+      title: 'Cita café',
+      start: '2024-02-27T17:30:00',
+      backgroundColor: 'green',
+      borderColor: 'green'
+    },
+    {
+      title: 'Exámenes de sangre',
+      start: '2024-02-29T09:30:00',
+      backgroundColor: 'green',
+      borderColor: 'green'
+    },
+    {
+      title: 'Resultados Ex. sangre',
+      start: '2024-03-04T14:30:00',
+      backgroundColor: 'green',
+      borderColor: 'green'
+    },
+  ],
+  eventDidMount: function(info) {
+    if (info.event.extendedProps.status === 'done') {
+
+      // Change background color of row
+      info.el.style.backgroundColor = 'red';
+
+      // Change color of dot marker
+      var dotEl = info.el.getElementsByClassName('fc-event-dot')[0];
+      if (dotEl) {
+        dotEl.style.backgroundColor = 'white';
+      }
+    }
+  },
+  
+      });
+    
+      calendar.render();
+    });
+
+  </script>
 
 </body>
 
