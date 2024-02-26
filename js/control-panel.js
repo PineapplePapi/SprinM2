@@ -17,6 +17,48 @@ document.addEventListener("DOMContentLoaded", function () {
   const tablaexamenorina = document.getElementById("tablaexamenorina");
   const tablaperfilbio = document.getElementById("tablaperfilbio");
   const tablacoagulacion = document.getElementById("tablacoagulacion");
+  const infopersonal = document.getElementById("infopersonal");
+  const guardarcambios = document.getElementById("guardarcambios");
+  const nombreGrande = document.getElementById("nombreGrande");
+  const familia = document.getElementById("familia");
+  //obtencion de los p de información
+  const nombrecompleto = document.getElementById("nombre-completo");
+  const edad = document.getElementById("edad");
+  const email = document.getElementById("email");
+  const telefono = document.getElementById("telefono");
+  const salud = document.getElementById("salud");
+  const direccion = document.getElementById("direccion");
+  const ocupacion = document.getElementById("ocupacion");
+  const inputnombre = document.getElementById("input-nombre");
+  const inputedad = document.getElementById("input-edad");
+  const inputemail = document.getElementById("input-email");
+  const inputtelefono = document.getElementById("input-telefono");
+  const inputsalud = document.getElementById("input-salud");
+  const inputdireccion = document.getElementById("input-direccion");
+  const inputocupacion = document.getElementById("input-ocupacion");
+  const inputfamilia = document.getElementById("input-familia");
+
+  infopersonal.addEventListener("click", () => {
+    inputnombre.value = nombrecompleto.textContent;
+    inputedad.value = edad.textContent;
+    inputemail.value = email.textContent;
+    inputtelefono.value = telefono.textContent;
+    inputsalud.value = salud.textContent;
+    inputdireccion.value = direccion.textContent;
+    inputocupacion.value = ocupacion.textContent;
+    inputfamilia.value = familia.textContent;
+  });
+  guardarcambios.addEventListener("click", () => {
+    nombrecompleto.textContent = inputnombre.value;
+    edad.textContent = inputedad.value;
+    email.textContent = inputemail.value;
+    telefono.textContent = inputtelefono.value;
+    salud.textContent = inputsalud.value;
+    direccion.textContent = inputdireccion.value;
+    ocupacion.textContent = inputocupacion.value;
+    nombreGrande.textContent = inputnombre.value;
+    familia.textContent = inputfamilia.value;
+  });
 
   history.addEventListener("click", () => {
     divhistory.classList.toggle("d-none");

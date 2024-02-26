@@ -116,9 +116,9 @@
                 <div class="col-lg-4">
                   <div class="card mb-4">
                     <div class="card-body text-center">
-                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
-                        class="rounded-circle img-fluid" style="width: 150px;">
-                      <h5 class="my-3">Juan Alberto</h5>
+                      <img src="/assets/img/xokas.jpeg" alt="avatar"
+                        class=" " style="width: 250px;">
+                      <h5 class="my-3" id="nombreGrande">Juan Medina Correa</h5>
                    
                     </div>
                   </div>
@@ -133,10 +133,9 @@
                           <button class="mb-0 btn btn-primary" id="history">Historico de Exámenes</button>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                            <button class="mb-0 btn btn-primary">Familiares</button>
+                            <button class="mb-0 btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="infopersonal">Editar Información Personal</button>
                         </li>
-                        
-                    
+                      
                       </ul>
                     </div>
                   </div>
@@ -150,10 +149,10 @@
                         </div>
                       <div class="row">
                         <div class="col-sm-3">
-                          <p class="mb-0">Nombre Completo</p>
+                          <p class="mb-0" >Nombre Completo</p>
                         </div>
                         <div class="col-sm-9">
-                          <p class="text-muted mb-0">Juan Alberto Medina Correa</p>
+                          <p class="text-muted mb-0" id="nombre-completo">Juan Alberto Medina Correa</p>
                         </div>
                       </div>
                       <hr>
@@ -162,16 +161,16 @@
                           <p class="mb-0">Edad</p>
                         </div>
                         <div class="col-sm-9">
-                          <p class="text-muted mb-0">77 Años</p>
+                          <p class="text-muted mb-0" id="edad">77 Años</p>
                         </div>
                       </div>
                       <hr>
                       <div class="row">
                         <div class="col-sm-3">
-                          <p class="mb-0">Email</p>
+                          <p class="mb-0" >Email</p>
                         </div>
                         <div class="col-sm-9">
-                          <p class="text-muted mb-0">juan@gmail.com</p>
+                          <p class="text-muted mb-0" id="email">juan@gmail.com</p>
                         </div>
                       </div>
                       <hr>
@@ -180,7 +179,7 @@
                           <p class="mb-0">Teléfono</p>
                         </div>
                         <div class="col-sm-9">
-                          <p class="text-muted mb-0">+569 1234 5678</p>
+                          <p class="text-muted mb-0"  id="telefono">+569 1234 5678</p>
                         </div>
                       </div>
                       <hr>
@@ -189,28 +188,36 @@
                           <p class="mb-0">Salud</p>
                         </div>
                         <div class="col-sm-9">
-                          <p class="text-muted mb-0">Fonasa B</p>
+                          <p class="text-muted mb-0"  id="salud">Fonasa B</p>
                         </div>
                       </div>
                       <hr>
                       <div class="row">
                         <div class="col-sm-3">
-                          <p class="mb-0">Dirección</p>
+                          <p class="mb-0" >Dirección</p>
                         </div>
                         <div class="col-sm-9">
-                          <p class="text-muted mb-0">Los Ángeles, Bío-Bío, Chile.</p>
+                          <p class="text-muted mb-0" id="direccion">Los Ángeles, Bío-Bío, Chile.</p>
                         </div>
                       </div>
                       <hr>
                       <div class="row">
                         <div class="col-sm-3">
-                          <p class="mb-0">Ocupación</p>
+                          <p class="mb-0" >Ocupación</p>
                         </div>
                         <div class="col-sm-9">
-                          <p class="text-muted mb-0">Jubilado</p>
+                          <p class="text-muted mb-0" id="ocupacion">Streamer</p>
                         </div>
                       </div>
-
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <p class="mb-0" >Familiares</p>
+                        </div>
+                        <div class="col-sm-9">
+                          <p class="text-muted mb-0" id="familia">Ibai Llanos, Rubius, Windi </p>
+                        </div>
+                      </div>
                       
                     </div>
                   </div>
@@ -218,6 +225,65 @@
               </div>
               </div>
             </div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Información Personal</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+
+      <div class="modal-body">
+
+
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="input-nombre" aria-describedby="emailHelp">
+            
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Edad</label>
+            <input type="text" class="form-control" id="input-edad">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Email</label>
+            <input type="text" class="form-control" id="input-email">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Teléfono</label>
+            <input type="text" class="form-control" id="input-telefono">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Salud</label>
+            <input type="text" class="form-control" id="input-salud">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Dirección
+            </label>
+            <input type="text" class="form-control" id="input-direccion">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Ocupación</label>
+            <input type="text" class="form-control" id="input-ocupacion">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Familiares</label>
+            <input type="text" class="form-control" id="input-familia">
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+        <button type="button" class="btn btn-primary" id="guardarcambios" data-bs-dismiss="modal">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
             <div class="container d-none" id="history-toggle">
                 <div class="col-lg-12">
                     <div class="container">
