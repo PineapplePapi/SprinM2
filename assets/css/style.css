@@ -1755,3 +1755,18 @@ section {
 /*--------------------------------------------------------------
 # Control-Panel
 --------------------------------------------------------------*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #0c0505;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #a2dff7ae;
+}
