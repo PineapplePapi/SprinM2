@@ -468,28 +468,124 @@ document.addEventListener("DOMContentLoaded", function () {
             !tablahemograma.classList.contains("d-none") ||
             !tablareflipidico.classList.contains("d-none") ||
             !tablaperfillipidico.classList.contains("d-none") ||
-            !tablacoagulacion.classList.contains("d-none")
+            !tablacoagulacion.classList.contains("d-none") ||
+            !tablaorina.classList.contains("d-none") ||
+            !tablaexamenorina.classList.contains("d-none")
           ) {
             tablahemograma.classList.add("d-none");
             tablareflipidico.classList.add("d-none");
             tablaperfillipidico.classList.add("d-none");
             tablacoagulacion.classList.add("d-none");
+            tablaorina.classList.add("d-none");
+            tablaexamenorina.classList.add("d-none");
           }
+          $(document).ready(function () {
+            const labels = ["Septiembre", "Diciembre", "Febrero"];
+
+            const Colesterol = {
+              label: "Colesteriol Total",
+              data: [10, 55, 60, 120],
+              borderColor: "rgba(248, 37, 37, 0.8)",
+              fill: false,
+              tension: 0.1,
+            };
+
+            const Proteinas = {
+              label: "Proteinas Totales",
+              data: [5, 44, 55, 100],
+              borderColor: "rgba(69, 248, 84, 0.8)",
+              fill: false,
+              tension: 0.1,
+            };
+
+            const data = {
+              labels: labels,
+              datasets: [Colesterol, Proteinas],
+            };
+
+            const config = {
+              type: "line",
+              data: data,
+            };
+            if (grafico == null) {
+              grafico = new Chart(graph, config);
+            } else {
+              grafico.destroy();
+              grafico = new Chart(graph, config);
+            }
+          });
 
           header.innerText = "Examen de Perfíl Bioquímico";
-
           tablaperfilbio.classList.remove("d-none");
           break;
         case "Coagulación":
           if (
             !tablahemograma.classList.contains("d-none") ||
             !tablareflipidico.classList.contains("d-none") ||
-            !tablaperfillipidico.classList.contains("d-none")
+            !tablaperfillipidico.classList.contains("d-none") ||
+            !tablaorina.classList.contains("d-none") ||
+            !tablaexamenorina.classList.contains("d-none") ||
+            !tablaperfilbio.classList.contains("d-none")
           ) {
             tablahemograma.classList.add("d-none");
             tablareflipidico.classList.add("d-none");
             tablaperfillipidico.classList.add("d-none");
+            tablaorina.classList.add("d-none");
+            tablaexamenorina.classList.add("d-none");
+            tablaperfilbio.classList.add("d-none");
           }
+          $(document).ready(function () {
+            const labels = ["Septiembre", "Diciembre", "Febrero"];
+            const colors = ["#695ccb", "#695ccb", "#695ccb"];
+
+            const data = {
+              labels: labels,
+              datasets: [
+                {
+                  label: "Colesterol HDL en Sangre (mg/dL)",
+                  data: [12, 13, 14],
+                  backgroundColor: colors,
+                },
+              ],
+            };
+
+            const config = {
+              type: "bar",
+              data: data,
+              options: {
+                responsive: true,
+                plugins: {
+                  title: {
+                    display: true,
+                    text: "Tiempo de Protrombina",
+                  },
+                },
+                scales: {
+                  x: {
+                    title: {
+                      display: true,
+                      text: "Meses",
+                    },
+                  },
+                  y: {
+                    min: 10,
+                    max: 16,
+                    title: {
+                      display: true,
+                      text: "Valores Colesterol HDL en Sangre (mg/dL)",
+                    },
+                  },
+                },
+              },
+            };
+            if (grafico == null) {
+              grafico = new Chart(graph, config);
+            } else {
+              grafico.destroy();
+              grafico = new Chart(graph, config);
+            }
+          });
+
           header.innerText = "Examen de Coagulación";
           tablacoagulacion.classList.remove("d-none");
           break;
